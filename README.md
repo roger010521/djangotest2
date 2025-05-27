@@ -25,11 +25,14 @@ pip install -r requirements.txt
 # 4. Crear archivo .env si usas variables de entorno
 cp .env.example .env
 
-# 5. Migrar la base de datos
+# 5. Crear migraciones
+python manage.py makemigrations
+
+# 6. Migrar la base de datos
 python manage.py migrate
 
-# 6. Crear superusuario (opcional)
+# 7. Crear superusuario (opcional)
 python manage.py createsuperuser
 
-# 7. Correr el servidor local
+# 8. Correr el servidor local
 python manage.py runserver
